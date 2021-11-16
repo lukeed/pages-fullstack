@@ -1,4 +1,5 @@
-import cloudflare from './adapter-cloudflare';
+// import cloudflare from '@sveltejs/adapter-cloudflare';
+import cloudflare from './adapter-cloudflare/index.js';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
