@@ -1,16 +1,17 @@
 {
   "name": "kit",
   "version": "0.0.1",
+  "type": "module",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
     "preview": "svelte-kit preview"
   },
   "devDependencies": {
+    "@sveltejs/adapter-cloudflare": "next",
     "@sveltejs/kit": "next",
     "svelte": "^3.34.0"
   },
-  "type": "module",
   "dependencies": {
     "@fontsource/fira-mono": "^4.5.0",
     "@lukeed/uuid": "^2.0.0",

@@ -1,38 +1,21 @@
-# create-svelte
+# SvelteKit example with Cloudflare Pages
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+This is the demo application created by the `npm init svelte@next` command. The only change is that [`@sveltejs/adapter-cloudflare`](https://www.npmjs.com/package/@sveltejs/adapter-cloudflare) has been installed and attached to the `svelte.config.js` file.
 
-## Creating a project
+## Pages Deployment
 
-If you're seeing this, you've probably already done this step. Congrats!
+Cloudflare Pages automatically deploys this repository.
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
+Here are the settings for the Pages project:
 
-# create a new project in my-app
-npm init svelte@next my-app
-```
+- **Framework preset** – None
+- **Build command** – `npm run build`
+- **Build output directory** – `.svelte-kit/cloudflare`
+- **Environment variables**
+  - `NODE_VERSION` :: `16`
 
-> Note: the `@next` is temporary
+## Development
 
-## Developing
+As with any SvelteKit application, you can run `npm run dev` for SvelteKit's local development experience.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
-
-```bash
-npm run build
-```
-
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+Refer to [the SvelteKit documentation](https://kit.svelte.dev/) for any additional information.
