@@ -5,12 +5,14 @@
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
-    "preview": "svelte-kit preview"
+    "preview": "svelte-kit preview",
+    "watch": "wrangler pages dev .svelte-kit/cloudflare -- npm run dev"
   },
   "devDependencies": {
     "@sveltejs/adapter-cloudflare": "next",
     "@sveltejs/kit": "next",
-    "svelte": "^3.34.0"
+    "svelte": "^3.34.0",
+    "wrangler": "beta"
   },
   "dependencies": {
     "@fontsource/fira-mono": "^4.5.0",
