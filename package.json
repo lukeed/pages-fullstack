@@ -6,17 +6,20 @@
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
     "preview": "svelte-kit preview",
-    "watch": "wrangler pages dev .svelte-kit/cloudflare -- npm run dev"
-  },
-  "devDependencies": {
-    "@sveltejs/adapter-cloudflare": "next",
-    "@sveltejs/kit": "next",
-    "svelte": "^3.34.0",
-    "wrangler": "beta"
+    "watch": "node --experimental-vm-modules bin/watch.js"
   },
   "dependencies": {
     "@fontsource/fira-mono": "^4.5.0",
     "@lukeed/uuid": "^2.0.0",
     "cookie": "^0.4.1"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-cloudflare": "next",
+    "@sveltejs/kit": "next",
+    "local-access": "1.1.0",
+    "miniflare": "next",
+    "mrmime": "1.0.0",
+    "svelte": "^3.34.0",
+    "watchlist": "0.3.1"
   }
 }
