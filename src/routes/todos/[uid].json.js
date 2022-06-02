@@ -7,7 +7,7 @@ export const patch = async (event) => {
 
 	return api(event, `todos/${locals.userid}/${params.uid}`, {
 		text: formData.get('text'),
-		done: formData.get('done') ? !!formData.get('done') : undefined
+		done: formData.has('done') ? !!formData.get('done') : undefined
 	});
 };
 
