@@ -2,14 +2,10 @@ import cookie from 'cookie';
 import { v4 as uuid } from '@lukeed/uuid';
 
 export const handle = async ({ event, resolve }) => {
-	const { request, url, locals } = event
+	const { request, locals } = event
 	const cookies = cookie.parse(request.headers.get('cookie') || '');
+	
 	locals.userid = cookies.userid || uuid();
-
-	// TODO https://github.com/sveltejs/kit/issues/1046
-	if (url.searchParams.has('_method')) {
-		request.method = url.searchParams.get('_method').toUpperCase();
-	}
 
 	const response = await resolve(event);
 
