@@ -5,9 +5,9 @@ const config = {
 	kit: {
 		adapter: cloudflare(),
 		methodOverride: {
-      parameter: '_method',
-      allowed: ['PUT', 'PATCH', 'DELETE']
-    }
+		parameter: '_method',
+		allowed: ['PUT', 'PATCH', 'DELETE']
+	}
 	}
 };
 

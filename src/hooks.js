@@ -15,7 +15,7 @@ export const handle = async ({ event, resolve }) => {
 		response.headers.set('set-cookie', cookie.serialize('userid', locals.userid, {
 			path: '/',
 			httpOnly: true
-		}))
+		}));
 	}
 
 	return response;
